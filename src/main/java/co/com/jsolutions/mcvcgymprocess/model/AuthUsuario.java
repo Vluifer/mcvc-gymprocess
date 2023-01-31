@@ -14,6 +14,7 @@ import jakarta.persistence.*;
 
 public class AuthUsuario implements Serializable {
     private static final long serialVersionUID = 1L;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Integer id;
     @OneToMany

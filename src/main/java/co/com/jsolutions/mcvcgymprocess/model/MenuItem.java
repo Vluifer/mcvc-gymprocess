@@ -10,6 +10,7 @@ import lombok.Data;
 @Table(name = "menu_items")
 public class MenuItem implements Serializable {
     private static final long serialVersionUID = 1L;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Integer id;
     private String modulo_categoria;

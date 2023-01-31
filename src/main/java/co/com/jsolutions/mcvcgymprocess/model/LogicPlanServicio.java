@@ -10,6 +10,7 @@ import lombok.Data;
 @Table(name = "logic_planes_servicios")
 public class LogicPlanServicio implements Serializable {
     private static final long serialVersionUID = 1L;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Integer id;
     @ManyToOne

@@ -16,7 +16,7 @@ public class LogicTarifaServiceImpl implements LogicTarifaService {
     @Override
     @Transactional(readOnly = true)
     public List<LogicTarifa> listarTarifas() {
-        return (List<LogicTarifa>) logicTarifaRep.findAll();
+        return logicTarifaRep.findAll();
     }
 
     @Override
@@ -27,13 +27,13 @@ public class LogicTarifaServiceImpl implements LogicTarifaService {
 
     @Override
     @Transactional
-    public void eliminar(Integer id) {
-        logicTarifaRep.deleteById(id);
+    public void eliminar(LogicTarifa tarifa) {
+        logicTarifaRep.delete(tarifa);
     }
 
     @Override
     @Transactional(readOnly = true)
-    public LogicTarifa buscarid(LogicTarifa tarifa) {
-        return logicTarifaRep.findById(tarifa.getId()).orElse(null);
+    public LogicTarifa buscarid(Integer id) {
+        return logicTarifaRep.findById(id).get();
     }
 }

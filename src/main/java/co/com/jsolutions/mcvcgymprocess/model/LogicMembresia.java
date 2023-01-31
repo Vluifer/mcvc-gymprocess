@@ -12,6 +12,7 @@ import jakarta.persistence.*;
 @Table(name = "logic_membresías ")
 public class LogicMembresia  implements Serializable {
     private static final long serialVersionUID = 1L;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Integer id;
     @ManyToOne

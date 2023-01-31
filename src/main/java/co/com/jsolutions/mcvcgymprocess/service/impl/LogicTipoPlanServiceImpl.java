@@ -26,13 +26,13 @@ public class LogicTipoPlanServiceImpl implements LogicTipoPlanService {
 
     @Override
     @Transactional
-    public void eliminar(Integer id) {
-        logicTipoPlanRep.deleteById(id);
+    public void eliminar(LogicTipoPlan tipoPlan) {
+        logicTipoPlanRep.delete(tipoPlan);
     }
 
     @Override
     @Transactional(readOnly = true)
-    public LogicTipoPlan buscarid(LogicTipoPlan tipoPlan) {
-        return logicTipoPlanRep.findById(tipoPlan.getId()).orElse(null);
+    public LogicTipoPlan buscarid(Integer id) {
+        return logicTipoPlanRep.findById(id).get();
     }
 }

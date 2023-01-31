@@ -31,7 +31,7 @@ public class LogicServicioServiceImpl implements LogicServicioService {
     }
 
     @Override
-    public LogicServicio buscarid(LogicServicio servicio) {
-        return logicServicioRep.findById(servicio.getId()).orElse(null);
+    public LogicServicio buscarid(Integer id) {
+        return logicServicioRep.findById(id).get();
     }
 }

@@ -11,6 +11,7 @@ import jakarta.persistence.*;
 @Table(name = "auth_perfiles")
 public class AuhtPerfil implements Serializable {
     private static final long serialVersionUID = 1L;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Integer id;
     private String nombre;

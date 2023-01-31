@@ -7,6 +7,6 @@ import java.util.List;
 public interface LogicTarifaService {
     public List<LogicTarifa> listarTarifas();
     public void guardar (LogicTarifa tarifa);
-    public void eliminar (Integer id);
-    public LogicTarifa buscarid(LogicTarifa tarifa);
+    public void eliminar (LogicTarifa tarifa);
+    public LogicTarifa buscarid(Integer id);
 }

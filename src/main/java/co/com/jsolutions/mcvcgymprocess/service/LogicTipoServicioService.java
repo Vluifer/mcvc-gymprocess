@@ -8,5 +8,5 @@ public interface LogicTipoServicioService {
     public List<LogicTipoServicio> listarTiposServicios();
     public void guardar (LogicTipoServicio tipoServicio);
     public void eliminar (LogicTipoServicio tipoServicio);
-    public LogicTipoServicio buscarid(LogicTipoServicio tipoServicio);
+    public LogicTipoServicio buscarid(Integer id);
 }

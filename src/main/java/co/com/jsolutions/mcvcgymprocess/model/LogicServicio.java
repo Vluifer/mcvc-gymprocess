@@ -15,18 +15,18 @@ import jakarta.persistence.*;
 public class LogicServicio implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Integer id;
     private String nombre;
     @OneToMany
     private List<LogicTipoServicio> tipo_servicio = new ArrayList<>();
-    private String Descripcion;
-    private String acceso;
+    private String descripcion;
     private int inactivo;
     private Date create_at;
     private int usuario_registro;
     private Date update_at;
     private int usuario_actualizacion;
-    private Date delete_at;
+    private Date deleted_at;
     private int usuario_eliminacion;
 }

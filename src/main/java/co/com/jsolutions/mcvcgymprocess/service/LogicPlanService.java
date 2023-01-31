@@ -7,6 +7,6 @@ import java.util.List;
 public interface LogicPlanService {
     public List<LogicPlan> listarPlanes();
     public LogicPlan guardar (LogicPlan plan);
-    public void eliminar (Integer id);
-    public LogicPlan buscarid(LogicPlan plan);
+    public void eliminar (LogicPlan plan);
+    public LogicPlan buscarid(Integer id);
 }

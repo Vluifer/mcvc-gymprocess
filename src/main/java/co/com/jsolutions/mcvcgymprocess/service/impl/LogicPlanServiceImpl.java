@@ -26,12 +26,12 @@ public class LogicPlanServiceImpl implements LogicPlanService {
 
     @Override
     @Transactional
-    public void eliminar(Integer id) {
-        logicPlanRep.deleteById(id);
+    public void eliminar(LogicPlan plan) {
+        logicPlanRep.delete(plan);
     }
 
     @Override
-    public LogicPlan buscarid(LogicPlan plan) {
-        return logicPlanRep.findById(plan.getId()).orElse(null);
+    public LogicPlan buscarid(Integer id) {
+        return logicPlanRep.findById(id).get();
     }
 }

@@ -10,6 +10,7 @@ import lombok.Data;
 @Table(name = "auth_tipo_id")
 public class AuthTipoId implements Serializable {
     private static final long serialVersionUID = 1L;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private int id;
     private String codigo;
